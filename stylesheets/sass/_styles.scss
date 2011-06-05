@@ -1,0 +1,52 @@
+$bg: #FFDDCE;
+$text-color-1: #fff;
+
+@mixin text-shadow {
+	text-shadow: 0px 0px 5px #c6c6c6;
+}
+@mixin box-shadow {
+	-webkit-box-shadow: 0px 0px 5px #c6c6c6;
+	-moz-box-shadow: 0px 0px 5px #c6c6c6;
+	box-shadow: 0px 0px 5px #c6c6c6;
+}
+
+body {
+	font-family: "Helvetica Neue", Helvetica, Arial, serif;
+	font-size: 13px;
+	line-height: 20px;
+	background: $bg;
+}
+#container {
+	padding-bottom: 40px;
+	overflow: hidden;
+}
+#video {
+	margin-top: 80px;
+	iframe {
+		margin-left: 190px
+	}
+}
+@mixin heading {
+	text-align: center;
+	color: $text-color-1;
+	@include text-shadow;
+}
+h1 {
+	margin-top: 200px;
+	font-size: 80px;
+	line-height: 90px;
+	@include heading;
+}
+h2 {
+	font-size: 40px;	
+	@include heading;
+	margin-top: 30px;
+}
+#ultrasound {
+	border: #fff 10px solid;
+	margin: 0 auto;
+	@include box-shadow;
+	margin-left: 174px;
+	margin-top: 200px;
+	margin-bottom: 60px;
+}
